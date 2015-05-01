@@ -13,11 +13,9 @@ The following sections describe the components from the bottom up.
 
 Following is for Cloud Foundry Enviroment. Confirm to have an appropriate service and manifest.yml before setting up.
 
-`cd cities-service`
-
-`gradle assemble && gradle build`
-
-`cf push`
+* `cd cities-service`
+* `gradle assemble && gradle build`
+* `cf push`
 
 Verify Access 
 `curl -l http://cities-service.YOUR_DOMAIN/cities`
@@ -29,6 +27,17 @@ Reference about user provided sercice is link:http://docs.pivotal.io/pivotalcf/d
 
 * uri : Your cities-service URL 
 * tag : cities
+
+=== How to Setup Cities UI
+`cd cities-ui`
+
+`gradle assemble && gradle build`
+
+`cf push`
+
+Because binding service related configuration is writen in manifest.yml, the application is bound with cities-service.
+
+Verify Access http://cities-ui.YOUR_DOMAIN
 
 === cities-service
 
@@ -70,17 +79,6 @@ The same Spring Cloud Connectors extension technique could be used to create low
 * Registration of the `ServiceInfoCreator` and `ServiceConnectionCreator` to the Spring Cloud Connectors framework
 ** link:cities-client/src/main/resources/META-INF/services/org.springframework.cloud.cloudfoundry.CloudFoundryServiceInfoCreator[CloudFoundryServiceInfoCreator]
 ** link:cities-client/src/main/resources/META-INF/services/org.springframework.cloud.service.ServiceConnectorCreator[ServiceConnectorCreator]
-
-=== How to Setup Cities UI
-`cd cities-ui`
-
-`gradle assemble && gradle build`
-
-`cf push`
-
-Because binding service related configuration is writen in manifest.yml, the application is bound with cities-service.
-
-Verify Access http://cities-ui.YOUR_DOMAIN
 
 === cities-ui
 
