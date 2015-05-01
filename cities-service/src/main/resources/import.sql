@@ -1,5 +1,3 @@
-drop table city;
-
 create table city(
 	id number,
 	postal_code varchar2(100), 
