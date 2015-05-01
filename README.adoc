@@ -35,7 +35,7 @@ Reference about user provided sercice is link:http://docs.pivotal.io/pivotalcf/d
 
 `cf push`
 
-Because binding service related configuration is writen in manifest.yml, the application is bound with cities-service.
+Because binding service related configuration is writen in manifest.yml, the application is bound with cities-service when pushing.
 
 Verify Access http://cities-ui.YOUR_DOMAIN
 
