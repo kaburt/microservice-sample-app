@@ -1,0 +1,5 @@
+#org.springsource.ide.eclipse.gradle.core.preferences.GradleProjectPreferences
+#Wed Jan 21 10:59:57 PST 2015
+build.family.org.gradle.tooling.model.eclipse.HierarchicalEclipseProject=;cities-client;cities-service;cities-ui;
+org.springsource.ide.eclipse.gradle.linkedresources=
+org.springsource.ide.eclipse.gradle.rootprojectloc=
